@@ -1,0 +1,350 @@
+body.dark {
+  --primback: #2f3136;
+  --primcolor: #fff;
+  --hovcolor: var(--primcolor);
+  --actbackcolor: #464f57;
+  --hovbackcolor: #374048;
+}
+
+body.white {
+  --primback: #fff;
+  --primcolor: #000;
+  --hovcolor: #fff;
+  --actbackcolor: #0087ff;
+  --hovbackcolor: #94cdff;
+}
+
+body {
+    transition: 0.5s;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--primback);
+    color: var(--primcolor);
+    font-family: sans-serif;
+    user-select: none;
+    height: 100vh;
+}
+
+#main {
+    margin-top: 0 !important;
+    padding-top: 5%;
+}
+
+#imgDiv {
+    float: left;
+}
+
+#logDiv {
+}
+
+#logBody {
+    height: 790px;
+    overflow: auto;
+    scrollbar-color: #202225 #2f3136;
+}
+
+#logBody h2 {
+    margin-bottom: 5px
+}
+
+#func {
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.imgInText {
+    vertical-align: top;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.header {
+  transition: 0.5s;
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--primcolor);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primback);
+  }
+  
+  .header a {
+    transition: 0.2s;
+      margin-right: 10px;
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    color: inherit;
+  }
+
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color:var(--hovbackcolor);
+    color: var(--hovcolor);
+  }
+  
+  .header a:active {
+    background-color: var(--actbackcolor);
+    color: #fff;
+  }
+
+  .header a.active {
+    background-color: var(--actbackcolor);
+    color: #fff;
+  }
+  
+  .header-right {
+    margin-right: 1%;
+    float: right;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+
+
+  #imgswraper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  #imgswraper .zoomImg {
+    border-left: solid 5px var(--primback)
+  }
+
+  #imgswraper .zoomImg:first-child {
+    border-left: none;
+  }
+
+/* IMGS */
+
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  #modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  #modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  #modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  #close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  #close:hover,
+  #close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    #modal-content {
+      width: 100%;
+    }
+  }
+
+
+
+
+#wraper {
+  display: flex;
+  justify-content: center;
+}
+
+#wraper-content {
+  display: flex;
+}
+
+#wraper-content img {
+  width: 900px;
+}
+
+#wraper-content-coloumn {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-right: 1%;
+  justify-content: center;
+}
+
+
+a.simp-btn.primary {
+  background-color: rgba(147, 74, 255, 0.54);
+}
+
+a.simp-btn.primary:hover {
+  background-color: rgba(181, 132, 255, 0.54);
+}
+
+a.simp-btn.primary:active {
+  background-color: rgba(223, 202, 255, 0.54)
+}
+
+a.simp-btn.gold {
+  background-color: rgba(255, 207, 74, 0.54);
+}
+
+a.simp-btn.gold:hover {
+  background-color: rgba(255, 222, 132, 0.54);
+}
+
+a.simp-btn.gold:active {
+  background-color: rgba(255, 241, 202, 0.54)
+}
+
+a.simp-btn {
+  display: inline-block;
+  color: var(--primcolor);
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 1px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  width: max-content;
+} 
+a.simp-btn:hover { background: rgba(255,255,255,.2); }
+a.simp-btn:active { background: white; }
+
+
+  /* Download Button */
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.5rem;
+      color:var(--colorShadeA);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: inherit;
+  }
+
+  button.big-button {
+     padding: 1em 2em;
+     border: 2px solid var(--colorShadeA);
+    border-radius: 1em;
+    background: var(--colorShadeE);
+  transform-style: preserve-3d;
+     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  button.big-button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colorShadeC);
+    border-radius: inherit;
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+   transform: translate3d(0, 0.75em, -1em);
+       transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  
+  
+  button.big-button:hover {
+    background: var(--colorShadeD);
+    transform: translate(0, 0.375em);
+  }
+  
+  button.big-button:hover::before {
+    transform: translate3d(0, 0.75em, -1em);
+  }
+  
+  button.big-button:active {
+              transform: translate(0em, 0.75em);
+  }
+  
+  button.big-button:active::before {
+    transform: translate3d(0, 0, -1em);
+    
+        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+  
+  }
